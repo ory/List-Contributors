@@ -1,10 +1,6 @@
-name: ORY Contributor List
+name: Contributing to the Contributors
 
 on: [push]
-
-  workflow_dispatch:
-    schedule:
-      - cron:  '1 0 * * *'
 
 jobs:
   add-contributors:
@@ -16,7 +12,7 @@ jobs:
           REPO_NAME: '${{github.repository}}'
           ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
           CONTRIBUTOR: '## Collaborators'
-          FILEPATH: '/README.md'
+          FILEPATH: '/contributors.md'
           COLUMN_PER_ROW: '4'
           IMG_WIDTH: '50'
           FONT_SIZE: '14'
